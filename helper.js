@@ -12,7 +12,15 @@ const requestCalculator = async (op, intA, intB) => {
         },
         data: data
     };
-
+    
+    
+    // axios(config)
+    //     .then(function (response) {
+    //         res.send(JSON.stringify(response.data));
+    //     })
+    //     .catch(function (error) {
+    //         console.log(error);
+    //     });
     
     
     try {
