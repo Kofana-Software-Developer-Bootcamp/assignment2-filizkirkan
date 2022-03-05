@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> 4 main math properties </h1>
+    <div name="math">
+
+
+        <div>
+
+            n1: <input id="number1" type="number" /> <br />
+            n2: <input id="number2" type="number" /> <br />
+            AddResult: <input id="AddResult" type="text" value="0" /> <br />
+          </div>
+    
+          <button id="addition">+</button>
+          <button id="subtraction">-</button>
+          <button id="multiplication">*</button>
+          <button id="division">/</button>
+        </div>
+
+        
+    <br>
+    <div id="result"></div>
+    
+ 
+
+
+<script>
+
+      let n1 = document.getElementById("number1");
+      let n2 = document.getElementById("number2");
+      let result = document.getElementById("result");
+      const url = "http://localhost:3000/";
+
+
+      //Addition 
+      var addition = document.getElementById("addition");
+      addition.addEventListener("click", () => {
+        fetch(url + "add" + "?intA=" + n1.value + "&intB=" + n2.value)
+          .then((res) => res.json())
+          .then((data) => (result.textContent = data));
+      });
+
+
+        //Subtraction 
+      var subtraction = document.getElementById("subtraction");
+      subtraction.addEventListener("click", () => {
+        fetch(url + "subtract" + "?intA=" + n1.value + "&intB=" + n2.value)
+          .then((res) => res.json())
+          .then((data) => (result.textContent = data));
+      });
+
+
+      
+       
+      //Multiplication 
+      var multiplication = document.getElementById("multiplication");
+      multiplication.addEventListener("click", () => {
+        fetch(url + "multiply" + "?intA=" + n1.value + "&intB=" + n2.value)
+          .then((res) => res.json())
+          .then((data) => (result.textContent = data));
+      });
+
+     
+      //Division
+      var division = document.getElementById("division");
+      division.addEventListener("click", () => {
+        fetch(url + "divide" + "?intA=" + n1.value + "&intB=" + n2.value)
+          .then((res) => res.json())
+          .then((data) => (result.textContent = data));
+      });
+    
+
+
+
+
+        
+       
+           
+        
+          
+    </script>
+
+    
+    
+   
+</body>
+</html>
+
