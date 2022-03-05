@@ -9,6 +9,29 @@ app.use(express.json());
 app.use(cors());
 
 
+// const http = require('http')
+// const intA = 4
+// const intB = 6
+
+// const server = http.createServer((req, res) => {
+//     const url = req.url;
+
+//     if(url == '/') {
+//         res.write("Index Sayfasi")
+//     }
+//     else if(url == '/add') {
+//         requestCalculator("Add", req.query.intA, req.query.intB).then((response) => {
+//             res.send(xmlToJson(response, "Add"))
+//          })
+//     }
+//     // res.write("Merhaba")
+//     res.end()
+
+
+// })
+
+
+
 
 app.get("/", (req, res) => {
      res.send("Running Again");
